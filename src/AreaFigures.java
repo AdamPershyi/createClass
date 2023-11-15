@@ -1,0 +1,3 @@
+ interface AreaFigures {
+      double area ();
+}
