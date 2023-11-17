@@ -1,48 +1,40 @@
 import java.util.Random;
 
 public class FigureSupplier {
+    public  static final double minDouble = 0.0;
+    public  static final double maxDouble = 100.0;
 
 
-    Random random = new Random();
-    double randomDouble = random.nextDouble(0.0, 100.0);
+    public  double getRandom(){
+        Random random = new Random();
+        double randomDouble = random.nextDouble(minDouble,maxDouble);
+        return randomDouble;
+    }
 
     public Circle getRandomCircle() {
-        Random random = new Random();
-        double randomDouble = random.nextDouble(0.0, 100.0);
-        Circle circle1 = new Circle(ColorSupplier.getRandomColor(), randomDouble);
+        Circle circle1 = new Circle(ColorSupplier.getRandomColor(), getRandom());
         return circle1;
     }
 
     public Square getRandomSquare() {
-        Random random = new Random();
-        double randomDouble = random.nextDouble(0.0, 100.0);
-        double randomDouble1 = random.nextDouble(0.0, 100.0);
-        Square square1 = new Square(ColorSupplier.getRandomColor(), randomDouble, randomDouble1);
+        Square square1 = new Square(ColorSupplier.getRandomColor(), getRandom(),getRandom());
         return square1;
     }
 
     public Rectangle getRandomRectangle() {
-        Random random = new Random();
-        double randomDouble = random.nextDouble(0.0, 100.0);
-        double randomDouble1 = random.nextDouble(0.0, 100.0);
-        Rectangle rectangle = new Rectangle(ColorSupplier.getRandomColor(), randomDouble, randomDouble1);
+        Rectangle rectangle = new Rectangle(ColorSupplier.getRandomColor(), getRandom(),getRandom());
         return rectangle;
     }
 
     public RightTriangle getRandomRightTriangle() {
-        Random random = new Random();
-        double randomDouble = random.nextDouble(0.0, 100.0);
-        double randomDouble1 = random.nextDouble(0.0, 100.0);
-        RightTriangle rightTriangle = new RightTriangle(ColorSupplier.getRandomColor(), randomDouble, randomDouble1);
+        RightTriangle rightTriangle = new RightTriangle(ColorSupplier.getRandomColor(), getRandom(), getRandom());
         return rightTriangle;
     }
 
     public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        Random random = new Random();
-        double randomDouble = random.nextDouble(0.0, 100.0);
-        double randomDouble1 = random.nextDouble(0.0, 100.0);
-        double randomDouble2 = random.nextDouble(0.0, 100.0);
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), randomDouble, randomDouble1, randomDouble2);
+
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), getRandom(),
+                getRandom(),getRandom());
         return isoscelesTrapezoid;
     }
 

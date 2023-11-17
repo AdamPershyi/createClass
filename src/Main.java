@@ -2,19 +2,16 @@
 public class Main {
     public static void main(String[] args) {
 
-
-        Circle circle = new Circle(ColorSupplier.getRandomColor(), 11.0);
-        circle.draw();
-
         FigureSupplier figureSupplier = new FigureSupplier();
-        figureSupplier.getRandomRectangle().draw();
-        figureSupplier.getRandomRectangle().draw();
-        figureSupplier.getRandomSquare().draw();
-        figureSupplier.getRandomRightTriangle().draw();
-        figureSupplier.getRandomIsoscelesTrapezoid().draw();
-        figureSupplier.getRandomFigure().draw();
-        figureSupplier.getRandomFigure().draw();
-        figureSupplier.getDefaultFigures().draw();
+
+        Figure[] figuresArray = {figureSupplier.getRandomFigure(), figureSupplier.getRandomFigure(),
+                figureSupplier.getRandomFigure(), new Circle("White",31),
+                new Rectangle("Black",5, 6),
+        new Square("Yellow",11,22)};
+        for( Figure s : figuresArray) {
+            s.draw();
+        }
+
 
 
     }

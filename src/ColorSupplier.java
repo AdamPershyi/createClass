@@ -4,8 +4,8 @@ public class ColorSupplier {
 
 
     public static String getRandomColor() {
-        int index = new Random().nextInt(Enum.Color.values().length);
-        Enum.Color color1 = Enum.Color.values()[index];
+        int index = new Random().nextInt(Color.values().length);
+        Color color1 = Color.values()[index];
 
 
         return color1.toString();
